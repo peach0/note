@@ -120,6 +120,8 @@ yum install libncurses5-dev
 ```
 git clone https://github.com/peach0/vim.git
 ```
+[安装方式](https://github.com/peach0/vim)
+
 ## 安装mysql
 [mysql安装方式](https://blog.csdn.net/qq_17776287/article/details/53536761)
 参照播客一步步安装就行

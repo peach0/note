@@ -110,6 +110,7 @@ yum -y install python-devel ruby ruby-devel perl perl-devel perl-ExtUtils-Embed
 ./configure --with-features=huge --enable-gui=auto --enable-pythoninterp --with-python-config-dir=/usr/lib64/python2.7/config --with-python3-config-dir= /usr/local/python3/lib/python3.8/config-3.8m-x86_64-linux-gnu --enable-multibyte --with-compiledby="letwhip@gmail.comyum -y install python-devel ruby ruby-devel perl perl-devel perl-ExtUtils-Embed"
 ```
 + 缺失ncurses
+
 ![ncurses](./img/ncurses.png)
 
 ```
@@ -119,11 +120,11 @@ yum install libncurses5-dev
 ```
 git clone https://github.com/peach0/vim.git
 ```
-##安装mysql
+## 安装mysql
 [mysql安装方式](https://blog.csdn.net/qq_17776287/article/details/53536761)
 参照播客一步步安装就行
 
-##安装PHP
+## 安装PHP
 ```
 yum install libxml2-devel openssl-devel curl curl-devel gd gd-devel libmcrypt libmcrypt-devel
 

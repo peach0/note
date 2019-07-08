@@ -27,6 +27,7 @@ passwd java
 ## 安装zsh
 ```
 yum install zsh -y
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 ### 1.安装wd插件（目录映射）
 + 下载wd插件
@@ -78,7 +79,7 @@ source .zshrc
 ![agnoster1](./img/agnoster1.png)
 + 去掉用户名和域名
 ```
-vim vim .oh-my-zsh/themes/agnoster.zsh-theme
+vim .oh-my-zsh/themes/agnoster.zsh-theme
 注释掉prompt_conext
 ## Main prompt
 build_prompt() {
@@ -115,6 +116,11 @@ yum -y install python-devel ruby ruby-devel perl perl-devel perl-ExtUtils-Embed
 
 ```
 yum install libncurses5-dev
+```
+or
+
+```
+yum install ncurses ncurses-devel
 ```
 + 添加vim插件
 ```

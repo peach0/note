@@ -4,7 +4,7 @@
 
 ```ssh-keygen -t rsa -C "tltmacmini"```
 
-
+ strace
 
 
 

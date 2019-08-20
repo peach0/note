@@ -35,7 +35,7 @@
   + */#进行当前单词的向前匹配和向后匹配
 + 搜索替换
   + Substitute命令允许我们查找并且替换掉文本，并且支持正则
-  + :[range]s[ubtitute]/{pattern}/{string}/[flag]
+  + `:[range]s[ubtitute]/{pattern}/{string}/[flag]`
   + Range表示范围 比如:10,20 表示10-20行，%表示全部
   + pattern是要替换的模式，string是替换后的文本
   + Flag替换的标志 
@@ -44,24 +44,24 @@
     + n(number)报告比配到的次数而不替换，可以用来查看匹配次数
 + Buffer切换
   + :ls列举所有当前缓冲区  :b n跳转到第n个缓冲区
-  + :bpre :bnext :bfirst :blast
+  + `:bpre :bnext :bfirst :blast`
   + 或者:b buffer_name 加上tab补全跳转
 + 窗口可视化分割
-  + <ctrl+w>s水平分割 <ctrl+w>v垂直分割，或者:sp/:vs
-  + <ctrl+w>hjkl进行跳转
+  + `<ctrl+w>s`水平分割` <ctrl+w>v`垂直分割，或者`:sp/:vs`
+  + `<ctrl+w>hjkl`进行跳转
 
 - vim宏
   - 宏的使用分为录制和回放
   - 使用q来录制，同时也是q结束录制
-  - 使用q{register}选择要保存的寄存器，把录制的命令保存到其中
-  - 使用@{register}回放寄存器中保存的一些列命名
+  - 使用`q{register}`选择要保存的寄存器，把录制的命令保存到其中
+  - 使用`@{register}`回放寄存器中保存的一些列命名
 - 代码补全（三种补全类型）
   - 使用ctrl+n和ctrl+p补全单词
   - 使用ctrl+x ctrl+f补全文件名
   - 使用ctrl+x ctrl+o补全代码，需要开启文件类型检查，安装插件
 - vim配色
   - :colorscheme显示当前的主题配色，默认default
-  - :colorscheme <ctrl+d> 显示所有的配色
+  - `:colorscheme <ctrl+d>` 显示所有的配色
   - :colorscheme 配色名 更换配色
 
 
@@ -71,10 +71,10 @@
 - vim映射（VIm映射就是把「一个操作」映射到「另一个操作」）
   - 基本映射指的是normal模式下的映射，
     - 使用map就可以实现映射，比如:map - x 然后就按一个 - 就会删除字符
-    - :map <space> viw 告诉vim按下空格的时候选中整个单词
-    - :map <c-d> dd 可以使用ctrl+d执行dd删除一行
+    - `:map <space> viw `告诉vim按下空格的时候选中整个单词
+    - `:map <c-d> dd` 可以使用ctrl+d执行dd删除一行
   - Vim常用的normal/visual/insert都可以映射，用nmap/vmap/imap定义映射只在normal/visual/insert分别有效 
-    - 现有的映射问题是当设置 : nmap - dd和:nmap \ - ，当使用-会进行递归映射，使用\就可以执行dd操作。
+    - 现有的映射问题是当设置` : nmap - dd`和`:nmap \ - `，当使用-会进行递归映射，使用\就可以执行dd操作。
     - *map有递归的风险，如果安装了一个插件，插件映射到了同一个案件的不同行为。有冲突就会有一个失效
   - Vim提供非递归映射，使用*map对应的nnoremap/vnoremap/inoremap,「任何时候」都使用非递归映射，避免冲突
 
@@ -121,18 +121,18 @@ VIm插件是使用vimscript或者其他语言编写的vim功能扩展
 - 文件管理器nerdtree
   - 使用nerdtree插件进行文件目录树管理
   - https://github.com/scrooloose/nerdtree
-  - noremap tr :NERDTreeToggle<CR>  通过快捷键快速打开和关闭目录
-  - noremap <leader>v :NERDTreeFind<CR>  查找文件位置
+  - `noremap tr :NERDTreeToggle<CR>  `通过快捷键快速打开和关闭目录
+  - `noremap <leader>v :NERDTreeFind<CR>  `查找文件位置
 - 快速搜索器
   - 快速查找并打开文件可以用ctrlp插件
   - https://github.com/ctrlpvim/ctrlp.vim
-  - let g:ctrlp_map = '<c-p>'
+  - `let g:ctrlp_map = '<c-p>'`
 - Vim快速定位插件
   - vim自带移动命令w/e基于单词移动，gg/G文件首尾，0/$行首尾，f{char}查询字符
   - ctrl+f ctrl+u前后翻屏
   - 使用easymotion实现快速定位
   - https://github.com/easymotion/vim-easymotion
-  - nmap ss <Plug>(easymotion-s2) 使用ss快速查询
+  - `nmap ss <Plug>(easymotion-s2) `使用ss快速查询
 - 成对编辑
   - https://github.com/tpope/vim-surround
   - normal模式下面增加，删除，修改成对内容
@@ -144,8 +144,8 @@ VIm插件是使用vimscript或者其他语言编写的vim功能扩展
 - 搜索替换插件far.vim
 - Vim-go插件自动补全
   - https://github.com/fatih/vim-go
-  - <c-x><c-o> 补全
-  - <c-]> 查看函数内容你  <c-o> 回退 <c-i>前进
+  - `<c-x><c-o>` 补全
+  - `<c-]> `查看函数内容你`  <c-o>` 回退` <c-i>`前进
   - 使用:gofmt 实现代码格式化
   - :GoRename 实现重构  :GoImports自动导入
 - Python-mode

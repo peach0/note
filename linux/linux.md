@@ -51,6 +51,7 @@ wd lo（进入/usr/local）
 ```
 wget https://github.com/downloads/wting/autojump/autojump_v21.1.2.tar.gz
 tar zxvf autojump_v21.1.2.tar.gz
+
 cd autojump_v21.1.2
 ./install.sh
 cd
